@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishan Madushanka | 3D Interactive Portfolio</title>
+  <meta name="description" content="Official 3D interactive portfolio of I.D. Ishan Madushanka - Technology Stream Graduate, Certified Aluminium Fabricator & RAC Technician, Web & Graphic Designer.">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Vendor Scripts (CDN with local fallback) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>window.gsap || document.write('<script src="vendor/gsap.min.js"><\/script>');</script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script>window.Lenis || document.write('<script src="vendor/lenis.min.js"><\/script>');</script>
+
+  <!-- ES Module Import Map for Three.js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.min.js",
+        "../vendor/three.module.js": "./vendor/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Top Horizontal Scroll Progress Bar -->
+  <div id="top-progress-bar"></div>
+
+  <!-- Page Transition Curtain Wipe -->
+  <div class="curtain-overlay"></div>
+
+  <!-- Preloader with "M" Logo -->
+  <div id="preloader">
+    <div class="preloader-logo">
+      <img src="assets/icons/logo.png" alt="Ishan Madushanka Logo" class="brand-logo-img preloader-logo-img">
+      <span style="font-family:var(--font-heading); font-size:1.4rem; font-weight:700;">Ishan Madushanka</span>
+    </div>
+    <div class="preloader-spinner"></div>
+  </div>
+
+  <!-- Sticky Glass Navigation Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/icons/logo.png" alt="Ishan Madushanka Logo" class="brand-logo-img">
+        <span>Ishan Madushanka</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="cv.html" class="nav-link">My CV</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="assets/cv/Ishan_Madushanka_CV.pdf" download="Ishan_Madushanka_CV.pdf" class="btn-cv-pill" title="Download Ishan's Resume">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download CV</span>
+        </a>
+
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <span class="theme-toggle-icon"></span>
+        </button>
+
+        <button class="mobile-toggle-btn" aria-label="Open mobile menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer">
+    <a href="index.html" class="mobile-nav-link active">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="education.html" class="mobile-nav-link">Education</a>
+    <a href="experience.html" class="mobile-nav-link">Experience</a>
+    <a href="cv.html" class="mobile-nav-link">My CV</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="assets/cv/Ishan_Madushanka_CV.pdf" download="Ishan_Madushanka_CV.pdf" class="btn-primary" style="margin-top:20px;">
+      Download CV
+    </a>
+  </div>
+
+  <!-- Page Content Wrapper -->
+  <main class="page-wrapper">
+    <div class="main-container">
+      <section class="hero-section">
+        
+        <!-- Left Hero Text Content -->
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span>Welcome to my Portfolio 👋</span>
+          </div>
+
+          <h1 class="hero-name">
+            Ishan <span class="last-name">Madushanka</span>
+          </h1>
+
+          <div class="hero-title">
+            Technology Stream Graduate & Certified Technical Professional
+          </div>
+
+          <div class="hero-subtitles">
+            <span>Aluminium Fabricator</span>
+            <span class="dot">•</span>
+            <span>RAC Technician</span>
+            <span class="dot">•</span>
+            <span>Web & Graphic Designer</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="assets/cv/Ishan_Madushanka_CV.pdf" download="Ishan_Madushanka_CV.pdf" class="btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download CV</span>
+            </a>
+            <a href="contact.html" class="btn-outline">
+              <span>Contact Me →</span>
+            </a>
+          </div>
+
+          <!-- Social Round Icons Row -->
+          <div class="social-icons-row">
+            <a href="https://linkedin.com/in/ishan-madushanka" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
+              <span>in</span>
+            </a>
+            <a href="https://github.com/ishan-madushanka" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1CCkCez8CA/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <span>f</span>
+            </a>
+            <a href="https://wa.me/94723331165?text=Hello%20Ishan,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.712 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+
+          <!-- Mouse Scroll Down Indicator -->
+          <div class="scroll-indicator-container">
+            <div class="mouse-pill">
+              <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down to Disintegrate & Explore</span>
+          </div>
+        </div>
+
+        <!-- Right 3D Particle Avatar Canvas Area -->
+        <div class="hero-3d-wrapper">
+          <div id="hero-canvas-container" style="width:100%; height:100%;"></div>
+
+          <!-- 3D Floating Icons exactly matching Reference (media_1793999338987_d5a66df2.jpg) -->
+          <!-- 1. Code Bubble </ > (Top-Left of head) -->
+          <div class="hero-3d-floating-icon icon-pos-code" data-depth="22" title="Web &amp; Software Development">
+            <div class="icon-float-inner float-anim-1">
+              <img src="assets/images/3d-icons/icon-3d-code.png" alt="3D Code Bubble">
+            </div>
+          </div>
+
+          <!-- 2. AC Unit (Top-Right of head) -->
+          <div class="hero-3d-floating-icon icon-pos-ac" data-depth="18" title="Refrigeration &amp; Air Conditioning">
+            <div class="icon-float-inner float-anim-2">
+              <img src="assets/images/3d-icons/icon-3d-ac.png" alt="3D AC Unit">
+            </div>
+          </div>
+
+          <!-- 3. Aluminium Window Frame (Mid-Right) -->
+          <div class="hero-3d-floating-icon icon-pos-window" data-depth="20" title="Aluminium Fabrication">
+            <div class="icon-float-inner float-anim-3">
+              <img src="assets/images/3d-icons/icon-3d-window.png" alt="3D Window Frame">
+            </div>
+          </div>
+
+          <!-- 4. Gear (Mid-Right lower) -->
+          <div class="hero-3d-floating-icon icon-pos-gear" data-depth="16" title="Mechanical &amp; Engineering">
+            <div class="icon-float-inner float-anim-1">
+              <img src="assets/images/3d-icons/icon-3d-gear.png" alt="3D Gear">
+            </div>
+          </div>
+
+          <!-- 5. 3D Open Laptop (Chest/arm level) -->
+          <div class="hero-3d-floating-icon icon-pos-laptop" data-depth="26" title="Graphic Design &amp; Multimedia">
+            <div class="icon-float-inner float-anim-2">
+              <img src="assets/images/3d-icons/icon-3d-laptop.png" alt="3D Laptop">
+            </div>
+          </div>
+
+          <!-- 6. Floating Single Crystal (Mid-Left) -->
+          <div class="hero-3d-floating-icon icon-pos-single-crystal" data-depth="15" title="Creative Innovation">
+            <div class="icon-float-inner float-anim-3">
+              <img src="assets/images/3d-icons/icon-3d-single-crystal.png" alt="3D Crystal">
+            </div>
+          </div>
+
+          <!-- 7. Floating Crystals & Sparkles (Bottom-Right) -->
+          <div class="hero-3d-floating-icon icon-pos-crystals" data-depth="14" title="3D Assets &amp; VFX">
+            <div class="icon-float-inner float-anim-1">
+              <img src="assets/images/3d-icons/icon-3d-crystals.png" alt="3D Crystals">
+            </div>
+          </div>
+
+          <!-- 8. 3D Cursor Arrow (Bottom-Right) -->
+          <div class="hero-3d-floating-icon icon-pos-cursor" data-depth="24" title="Interactive UI/UX">
+            <div class="icon-float-inner float-anim-2">
+              <img src="assets/images/3d-icons/icon-3d-cursor.png" alt="3D Cursor Pointer">
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/icons/logo.png" alt="Ishan Madushanka Logo" class="brand-logo-img">
+          <span>Ishan Madushanka</span>
+        </a>
+
+        <div class="footer-links-row">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="education.html" class="footer-link">Education</a>
+          <a href="experience.html" class="footer-link">Experience</a>
+          <a href="cv.html" class="footer-link">My CV</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span>© 2026 I.D. Ishan Madushanka. All rights reserved.</span>
+        <span>Thelwatta, Galle, Sri Lanka • Clean Browser Build (GitHub Pages Ready)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Bottom Pill Navigation (Exact match for Screenshot media_1794003397135_5483ae7e.png) -->
+  <nav class="mobile-bottom-pill-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="pill-nav-item active">
+      <svg class="pill-nav-icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="about.html" class="pill-nav-item">
+      <svg class="pill-nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path></svg>
+      <span>About</span>
+    </a>
+    <a href="education.html" class="pill-nav-item">
+      <svg class="pill-nav-icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+      <span>Education</span>
+    </a>
+    <a href="experience.html" class="pill-nav-item">
+      <svg class="pill-nav-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span>Experience</span>
+    </a>
+    <a href="cv.html" class="pill-nav-item">
+      <svg class="pill-nav-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <span>CV</span>
+    </a>
+    <a href="contact.html" class="pill-nav-item">
+      <svg class="pill-nav-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/hero3d.js"></script>
+  <script type="module" src="js/animations.js"></script>
+</body>
+</html>
+
