@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ECB8D"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#8B7BFF"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#1F4E9A"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#F1EDFF" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ECB8D"/>
+      <stop offset="100%" stop-color="#8B7BFF"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#4ECB8D" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+    <path d="M22 18V12a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6" stroke="url(#blueGrad)" stroke-width="2" stroke-linecap="round"/>
+    <rect x="26" y="6" width="12" height="4" rx="2" fill="url(#mintGrad)"/>
+    <path d="M18 24a8 8 0 0 1 8-8h12a8 8 0 0 1 8 8v28a6 6 0 0 1-6 6H24a6 6 0 0 1-6-6V24z" fill="url(#glassGrad)" stroke="url(#mintGrad)" stroke-width="2" filter="url(#glow)"/>
+    <rect x="22" y="28" width="20" height="12" rx="3" fill="url(#accentGrad)" opacity="0.3"/>
+    <text x="32" y="37" font-family="sans-serif" font-size="7" font-weight="bold" fill="#1F4E9A" text-anchor="middle">R32</text>
+    <line x1="18" y1="46" x2="46" y2="46" stroke="url(#blueGrad)" stroke-width="1.5"/>
+  
+</svg>
